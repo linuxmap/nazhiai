@@ -1,0 +1,4 @@
+MuxCleanService.Proxy=clean:tcp -p 10101:udp -p 10101
+Ice.Default.Host=192.168.2.46
+Ice.Override.ConnectTimeout=1000
+Ice.Default.InvocationTimeout=10000

@@ -1,0 +1,3 @@
+Mux.Proxy=operation:tcp -p 10100:udp -p 10100
+Ice.Default.Host=192.168.2.35
+Ice.Override.ConnectTimeout=1000

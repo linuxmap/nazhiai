@@ -1,0 +1,18 @@
+{
+  "fs": {
+    "host": "192.168.2.39",
+    "root": "D:/Install/nginx-1.15.2/html/short/",
+    "web": "http://192.168.2.39:8081/short/",
+    "web_service": true,
+    "max_files": 10,
+    "min_duration": 10,
+    "format": ".mp4"
+  },
+  "db": {
+    "url": "mysql://host=127.0.0.1 user=root pass=123 port=3306 db=appserver2 charset=utf8",
+    "username": "root",
+    "password": "123"
+  },
+  "rtsp": [
+  ]
+}

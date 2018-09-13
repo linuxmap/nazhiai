@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Slice Files">
+      <UniqueIdentifier>{5b50d82d-87e4-4884-8904-d02cbf508c42}</UniqueIdentifier>
+      <Extensions>ice</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5b5b9e53-26ec-4d61-a226-b1725ebcb5c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e6c00f18-6fc4-4242-a21c-641267dd1988}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cJSON.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CleanTaskManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Maria.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="generated\IceSDBasicTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated\Operation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="generated\IceSDRecordChecker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CleanShortVideoService.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RealtimeCleanTask.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FailedCleanTask.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerCleanTask.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerCleanTaskManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cJSON.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CleanTaskManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Configuration.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Maria.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="generated\IceSDBasicTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated\Operation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated\IceSDRecordChecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CleanShortVideoService.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RealtimeCleanTask.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FailedCleanTask.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TriggerCleanTask.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TriggerCleanTaskManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ProxyManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="conf\config.server" />
+    <None Include="conf\clean.json" />
+    <None Include="conf\SDRecordChecker.client" />
+  </ItemGroup>
+  <ItemGroup>
+    <IceBuilder Include="..\Slice Files\Operation.ice">
+      <Filter>Slice Files</Filter>
+    </IceBuilder>
+    <IceBuilder Include="..\Slice Files\IceSDRecordChecker.ice">
+      <Filter>Slice Files</Filter>
+    </IceBuilder>
+    <IceBuilder Include="..\Slice Files\IceSDBasicTypes.ice">
+      <Filter>Slice Files</Filter>
+    </IceBuilder>
+  </ItemGroup>
+</Project>

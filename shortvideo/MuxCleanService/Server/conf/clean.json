@@ -1,0 +1,10 @@
+{
+  "action": {
+    "hostid": 6,
+    "frequency": 60,
+    "margin": 5
+  },
+  "db": {
+    "url": "mysql://host=127.0.0.1 user=root pass=123 port=3306 db=appserver2 charset=utf8"
+  }
+}

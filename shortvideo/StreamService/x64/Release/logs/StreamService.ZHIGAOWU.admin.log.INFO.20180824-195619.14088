@@ -1,0 +1,4 @@
+Log file created at: 2018/08/24 19:56:19
+Running on machine: ZHIGAOWU
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0824 19:56:19.713436   820 Server.cpp:109] Stream Service started

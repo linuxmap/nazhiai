@@ -1,0 +1,5 @@
+RecordChecker.Proxy=SDRecordChecker:tcp -p 20051:udp -p 20051
+Ice.Default.Host=192.168.2.106
+Ice.Override.ConnectTimeout=1000
+Ice.Default.InvocationTimeout=10000
+Ice.MessageSizeMax=2048

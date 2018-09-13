@@ -1,0 +1,371 @@
+| INFO2 | 0 <eXutils.c: 1032> DNS resolution with 192.168.2.193:5061
+| INFO2 | 0 <eXutils.c: 1056> getaddrinfo returned: 192.168.2.193 port 5061
+| INFO2 | 1 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 927 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 927 <udp.c: 1436> Received message len=394 from 192.168.2.68:5060:
+REGISTER sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK336616514
+From: <sip:34020000001220000001@3402000000>;tag=1669602661
+To: <sip:34020000001220000001@3402000000>
+Call-ID: 1810720770
+CSeq: 1 REGISTER
+Contact: <sip:34020000001220000001@192.168.2.68:5060>
+Max-Forwards: 70
+User-Agent: IP Camera
+Expires: 7200
+Content-Length: 0
+
+
+| INFO3 | 927 <udp.c: 1454> MESSAGE REC. CALLID:1810720770
+| INFO1 | 927 <udp.c: 1502> no transaction for message
+| INFO2 | 927 <osip_transaction.c: 136> allocating transaction resource 1 1810720770
+| INFO2 | 927 <nist.c: 31> allocating NIST context
+| INFO3 | 927 <jcallback.c: 393> cb_rcvregister (id=1)
+| INFO2 | 927 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 927 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 935 <eXutils.c: 1032> DNS resolution with 192.168.2.68:5060
+| INFO2 | 935 <eXutils.c: 1056> getaddrinfo returned: 192.168.2.68 port 5060
+| INFO1 | 935 <eXtl_udp.c: 1274> Message sent: (to dest=192.168.2.68:5060)
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport=5060;branch=z9hG4bK336616514
+From: <sip:34020000001220000001@3402000000>;tag=1669602661
+To: <sip:34020000001220000001@3402000000>;tag=3488295767
+Call-ID: 1810720770
+CSeq: 1 REGISTER
+User-Agent: eXosip/5.0.0
+WWW-Authenticate: Digest realm="www.nazhiai.com",nonce="23fa2f4",algorithm="MD5"
+Content-Length: 0
+
+
+| INFO2 | 935 <eXtl_udp.c: 234> QOS: Check OS support for qwave.lib: 6 2 9200
+|WARNING| 935 <eXtl_udp.c: 243> QOS: Failed to load qwave.dll: no QoS available
+| INFO3 | 935 <jcallback.c: 1511> cb_snd123456xx (id=1)
+| INFO2 | 935 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 942 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 942 <udp.c: 1436> Received message len=595 from 192.168.2.68:5060:
+REGISTER sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1254085992
+From: <sip:34020000001220000001@3402000000>;tag=1669602661
+To: <sip:34020000001220000001@3402000000>
+Call-ID: 1810720770
+CSeq: 2 REGISTER
+Contact: <sip:34020000001220000001@192.168.2.68:5060>
+Authorization: Digest username="34020000001220000002", realm="www.nazhiai.com", nonce="23fa2f4", uri="sip:34020000002000000001@3402000000", response="be21300dc67dee300f14ed99fd6bf0f4", algorithm=MD5
+Max-Forwards: 70
+User-Agent: IP Camera
+Expires: 7200
+Content-Length: 0
+
+
+| INFO3 | 942 <udp.c: 1454> MESSAGE REC. CALLID:1810720770
+| INFO1 | 942 <udp.c: 1502> no transaction for message
+| INFO2 | 942 <osip_transaction.c: 136> allocating transaction resource 2 1810720770
+| INFO2 | 942 <nist.c: 31> allocating NIST context
+| INFO3 | 942 <jcallback.c: 393> cb_rcvregister (id=2)
+| INFO2 | 942 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 942 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 942 <eXutils.c: 1032> DNS resolution with 192.168.2.68:5060
+| INFO2 | 942 <eXutils.c: 1056> getaddrinfo returned: 192.168.2.68 port 5060
+| INFO1 | 942 <eXtl_udp.c: 1274> Message sent: (to dest=192.168.2.68:5060)
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport=5060;branch=z9hG4bK1254085992
+From: <sip:34020000001220000001@3402000000>;tag=1669602661
+To: <sip:34020000001220000001@3402000000>;tag=104847030
+Call-ID: 1810720770
+CSeq: 2 REGISTER
+User-Agent: eXosip/5.0.0
+Content-Length: 0
+
+
+| INFO2 | 942 <eXtl_udp.c: 234> QOS: Check OS support for qwave.lib: 6 2 9200
+|WARNING| 942 <eXtl_udp.c: 243> QOS: Failed to load qwave.dll: no QoS available
+| INFO3 | 942 <jcallback.c: 1511> cb_snd123456xx (id=2)
+| INFO2 | 942 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 5348 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 5348 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 5348 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO1 | 5348 <udp.c: 1502> no transaction for message
+| INFO2 | 5348 <osip_transaction.c: 136> allocating transaction resource 3 16263675
+| INFO2 | 5348 <nist.c: 31> allocating NIST context
+| INFO3 | 5348 <jcallback.c: 412> cb_rcvunkrequest (id=3)
+| INFO2 | 5348 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 5348 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 5348 <osip_transaction.c: 136> allocating transaction resource 4 623260306
+| INFO2 | 5348 <nict.c: 32> allocating NICT context
+| INFO2 | 7611 <eXutils.c: 1032> DNS resolution with 3402000000:5060
+| INFO2 | 7611 <eXutils.c: 1044> getaddrinfo failure. 3402000000:5060 (11001)
+| INFO1 | 7611 <jcallback.c: 1648> cb_transport_error (id=4)
+| INFO1 | 7611 <jcallback.c: 274> cb_nict_kill_transaction (id=4)
+| INFO2 | 7611 <osip_transaction.c: 281> free transaction resource 4 623260306
+| INFO2 | 7611 <nict.c: 147> free nict resource
+| INFO2 | 7611 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 7611 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 7611 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 7611 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO3 | 7611 <osip_transaction.c: 364> USELESS event!
+| INFO2 | 7611 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 7611 <eXtl_udp.c: 812> Dummy SIP message received
+| INFO2 | 7611 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 7611 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 7611 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 7612 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO3 | 7612 <osip_transaction.c: 364> USELESS event!
+| INFO2 | 7612 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 8927 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 8927 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 8927 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO3 | 8927 <osip_transaction.c: 364> USELESS event!
+| INFO2 | 8927 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 12928 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 12928 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 12928 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO3 | 12928 <osip_transaction.c: 364> USELESS event!
+| INFO2 | 12928 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 16947 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 16947 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 16947 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO3 | 16947 <osip_transaction.c: 364> USELESS event!
+| INFO2 | 16947 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 20968 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 20968 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 20968 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO3 | 20968 <osip_transaction.c: 364> USELESS event!
+| INFO2 | 20968 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 24988 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 24988 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 24988 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO3 | 24988 <osip_transaction.c: 364> USELESS event!
+| INFO1 | 24988 <eXtl_udp.c: 812> Dummy SIP message received
+| INFO1 | 29008 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 29008 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 29008 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO3 | 29008 <osip_transaction.c: 364> USELESS event!
+| INFO1 | 32945 <jcallback.c: 274> cb_nict_kill_transaction (id=1)
+| INFO1 | 32945 <jcallback.c: 274> cb_nict_kill_transaction (id=2)
+| INFO2 | 32945 <osip_transaction.c: 281> free transaction resource 2 1810720770
+| INFO2 | 32945 <nist.c: 73> free nist resource
+| INFO2 | 32945 <osip_transaction.c: 281> free transaction resource 1 1810720770
+| INFO2 | 32945 <nist.c: 73> free nist resource
+| INFO2 | 32945 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 33027 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 33027 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 33027 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO3 | 33027 <osip_transaction.c: 364> USELESS event!
+| INFO2 | 33027 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 37048 <eXtl_udp.c: 765> Message received from: 192.168.2.68:5060
+| INFO1 | 37048 <udp.c: 1436> Received message len=526 from 192.168.2.68:5060:
+MESSAGE sip:34020000002000000001@3402000000 SIP/2.0
+Via: SIP/2.0/UDP 192.168.2.68:5060;rport;branch=z9hG4bK1511993564
+From: <sip:34020000001220000001@3402000000>;tag=896637002
+To: <sip:34020000002000000001@3402000000>
+Call-ID: 16263675
+CSeq: 20 MESSAGE
+Content-Type: Application/MANSCDP+xml
+Max-Forwards: 70
+User-Agent: IP Camera
+Content-Length:   162
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>127</SN>
+<DeviceID>34020000001220000001</DeviceID>
+<Status>OK</Status>
+</Notify>
+
+| INFO3 | 37048 <udp.c: 1454> MESSAGE REC. CALLID:16263675
+| INFO3 | 37048 <osip_transaction.c: 364> USELESS event!
+| INFO2 | 37048 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 47048 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!
+| INFO1 | 47396 <eXtl_udp.c: 812> Dummy SIP message received
+| INFO2 | 47396 <eXconf.c: 789> eXosip: Reseting timer to 10s before waking up!

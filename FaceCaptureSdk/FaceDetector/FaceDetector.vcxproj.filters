@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="decode">
+      <UniqueIdentifier>{51aa13a0-7538-4c2c-a360-55656850432d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detect">
+      <UniqueIdentifier>{c0c9fadf-1447-48b1-bc82-ce8f55e8e87c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="decode\BaseDecoder.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\decoder.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\DirectoryDecoder.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\Dxva2Decoder.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\GpuDecoder.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\ImageProcess.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\OpencvDecoder.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\dxva2\ffmpeg_dxva2.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="detect\FaceDetectorImpl.h">
+      <Filter>detect</Filter>
+    </ClInclude>
+    <ClInclude Include="detect\FaceSdk.h">
+      <Filter>detect</Filter>
+    </ClInclude>
+    <ClInclude Include="detect\FaceSdkApi.h">
+      <Filter>detect</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\jpeg_codec.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\jpeg_codec_util.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceDetector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamDecoder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceCaptureStruct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceDetectStruct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamDecodeStruct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\DecodeManager.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="SnapStruct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="detect\SnapMachine.h">
+      <Filter>detect</Filter>
+    </ClInclude>
+    <ClInclude Include="SnapCamera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\AsyncDecoder.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\DecodedFrameQueue.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="DecodedFrame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="detect\FaceExtractorImpl.h">
+      <Filter>detect</Filter>
+    </ClInclude>
+    <ClInclude Include="detect\GpuCtxIndex.h">
+      <Filter>detect</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\CudaOperation.h">
+      <Filter>decode</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="decode\StreamParsor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceDetectCore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\BaseDecoder.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\DirectoryDecoder.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\Dxva2Decoder.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\GpuDecoder.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\ImageProcess.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\OpencvDecoder.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\dxva2\ffmpeg_dxva2.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="detect\FaceDetectorImpl.cpp">
+      <Filter>detect</Filter>
+    </ClCompile>
+    <ClCompile Include="detect\FaceSdkApi.cpp">
+      <Filter>detect</Filter>
+    </ClCompile>
+    <ClCompile Include="detect\SnapMachine.cpp">
+      <Filter>detect</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceDetector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamDecoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\DecodeManager.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="SnapCamera.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\AsyncDecoder.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\DecodedFrameQueue.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="detect\FaceExtractorImpl.cpp">
+      <Filter>detect</Filter>
+    </ClCompile>
+    <ClCompile Include="detect\GpuCtxIndex.cpp">
+      <Filter>detect</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\CudaOperation.cpp">
+      <Filter>decode</Filter>
+    </ClCompile>
+    <ClCompile Include="decode\StreamParsor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FaceDetector.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

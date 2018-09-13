@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A5C094C1-0D45-427C-9E73-0512C164E911}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FaceDetector</RootNamespace>
+    <ProjectName>FaceDetector</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FACEDETECTOR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FACEDETECTOR_EXPORTS;STREAMDECODER_EXPORTS;SNAPMACHINE_EXPORTS;BESTFINDER_STATISTIC;MATPOOL_STATISTIC;DEVELOPMENT;LOG_PERFORMANCE;TRACK_PERFORMANCE_FALSE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)FaceDetector;$(BOOST_1_66_0);$(OPENCV_CUDA)\include;$(SolutionDir)\Common;$(SolutionDir)FaceDetector\include;$(SolutionDir)FaceDetector\detect;$(SolutionDir)FaceDetector\decode;$(SolutionDir)FaceDetector\decode\dxva2;$(FFMPEG34)\include;$(CUDA_PATH)\include;$(GLOG)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(BOOST_1_66_0)\lib64-msvc-12.0;$(OPENCV_CUDA)\x64\lib;../x64/Debug;$(SolutionDir)FaceDetector\HCNetSDKCom\;$(FFMPEG34)\lib;D:\Program Files %28x86%29\Microsoft DirectX SDK %28February 2010%29\Lib\x64;$(CUDA_PATH)\lib\x64;$(GLOG)\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>boost_log_setup-vc120-mt-x64-1_66.lib;boost_log-vc120-mt-x64-1_66.lib;boost_regex-vc120-mt-x64-1_66.lib;HCCore.lib;HCNetSDK.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;postproc.lib;swresample.lib;swscale.lib;d3d9.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /r /y $(SolutionDir)x64\Debug\FaceDetector.lib D:\Workbench\facecapture\lib\Debug\
+xcopy /r /y $(SolutionDir)x64\Debug\FaceDetector.dll D:\Workbench\facecapture\lib\Debug\
+xcopy /r /y $(SolutionDir)x64\Debug\FaceDetector.dll D:\Workbench\facecapturedemo\bin\Debug\
+
+xcopy /r /y $(ProjectDir)FaceDetectStruct.h D:\Workbench\facecapture\include\
+xcopy /r /y $(ProjectDir)FaceCaptureStruct.h D:\Workbench\facecapture\include\
+xcopy /r /y $(ProjectDir)SnapStruct.h D:\Workbench\facecapture\include\
+xcopy /r /y $(ProjectDir)SnapCamera.h D:\Workbench\facecapture\include\
+xcopy /r /y $(ProjectDir)StreamDecodeStruct.h D:\Workbench\facecapture\include\
+
+xcopy /r /y $(ProjectDir)FaceDetector.h D:\Workbench\facecapture\include\
+xcopy /r /y $(ProjectDir)StreamDecoder.h D:\Workbench\facecapture\include\
+
+xcopy /r /y $(ProjectDir)decode\DecodedFrame.h D:\Workbench\facecapture\include\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FACEDETECTOR_EXPORTS;_DEVELOPMENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(BOOST_1_66_0);$(OPENCV_CUDA)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(BOOST_1_66_0)\lib64-msvc-12.0;$(OPENCV_CUDA)\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FACEDETECTOR_EXPORTS;STREAMDECODER_EXPORTS;SNAPMACHINE_EXPORTS;BESTFINDER_STATISTIC_FALSE;MATPOOL_STATISTIC_FALSE;DEVELOPMENT_FALSE;LOG_FPS;LOG_PERFORMANCE_FALSE;TRACK_PERFORMANCE_FALSE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Common;$(SolutionDir)FaceDetector\include;$(SolutionDir)FaceDetector\detect;$(SolutionDir)FaceDetector\decode;$(SolutionDir)FaceDetector\decode\dxva2;$(SolutionDir)FaceDetector;$(FFMPEG34)\include;$(CUDA_PATH)\include;$(GLOG)\include;C:\Program Files\FaceSdk 3rdParty\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ShowIncludes>false</ShowIncludes>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)FaceDetector\HCNetSDKCom\;$(SolutionDir)x64\Release;$(FFMPEG34)\lib;D:\Program Files %28x86%29\Microsoft DirectX SDK %28February 2010%29\Lib\x64;$(OPENCV_CUDA)\x64\lib;$(CUDA_PATH)\lib\x64;$(GLOG)\x64\Release;C:\Program Files\FaceSdk 3rdParty\lib$(PlatformArchitecture);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>HCCore.lib;HCNetSDK.lib;avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;postproc.lib;swresample.lib;swscale.lib;d3d9.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /y $(SolutionDir)x64\Release\FaceDetector.lib D:\Workbench\facecapture\lib\Release\
+copy /y $(SolutionDir)x64\Release\FaceDetector.dll D:\Workbench\facecapture\lib\Release\
+copy /y $(SolutionDir)x64\Release\FaceDetector.dll D:\Workbench\facecapturedemo\bin\Release\
+copy /y $(SolutionDir)x64\Release\FaceDetector.pdb D:\Workbench\facecapturedemo\bin\Release\
+
+copy /y $(ProjectDir)FaceDetectCore.h D:\Workbench\facecapture\include\
+copy /y $(ProjectDir)FaceDetectStruct.h D:\Workbench\facecapture\include\
+copy /y $(ProjectDir)FaceCaptureStruct.h D:\Workbench\facecapture\include\
+copy /y $(ProjectDir)SnapStruct.h D:\Workbench\facecapture\include\
+copy /y $(ProjectDir)SnapCamera.h D:\Workbench\facecapture\include\
+copy /y $(ProjectDir)StreamDecodeStruct.h D:\Workbench\facecapture\include\
+
+copy /y $(ProjectDir)FaceDetector.h D:\Workbench\facecapture\include\
+copy /y $(ProjectDir)StreamDecoder.h D:\Workbench\facecapture\include\
+
+copy /y $(ProjectDir)DecodedFrame.h D:\Workbench\facecapture\include\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DecodedFrame.h" />
+    <ClInclude Include="decode\BaseDecoder.h" />
+    <ClInclude Include="decode\AsyncDecoder.h" />
+    <ClInclude Include="decode\CudaOperation.h" />
+    <ClInclude Include="decode\DecodedFrameQueue.h" />
+    <ClInclude Include="decode\decoder.h" />
+    <ClInclude Include="decode\DecodeManager.h" />
+    <ClInclude Include="decode\DirectoryDecoder.h" />
+    <ClInclude Include="decode\Dxva2Decoder.h" />
+    <ClInclude Include="decode\dxva2\ffmpeg_dxva2.h" />
+    <ClInclude Include="decode\GpuDecoder.h" />
+    <ClInclude Include="decode\ImageProcess.h" />
+    <ClInclude Include="decode\jpeg_codec.h" />
+    <ClInclude Include="decode\jpeg_codec_util.h" />
+    <ClInclude Include="decode\OpencvDecoder.h" />
+    <ClInclude Include="decode\StreamParsor.h" />
+    <ClInclude Include="detect\FaceDetectorImpl.h" />
+    <ClInclude Include="detect\FaceExtractorImpl.h" />
+    <ClInclude Include="detect\FaceSdk.h" />
+    <ClInclude Include="detect\FaceSdkApi.h" />
+    <ClInclude Include="detect\GpuCtxIndex.h" />
+    <ClInclude Include="detect\SnapMachine.h" />
+    <ClInclude Include="FaceCaptureStruct.h" />
+    <ClInclude Include="FaceDetectCore.h" />
+    <ClInclude Include="FaceDetector.h" />
+    <ClInclude Include="FaceDetectStruct.h" />
+    <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SnapCamera.h" />
+    <ClInclude Include="SnapStruct.h" />
+    <ClInclude Include="StreamDecoder.h" />
+    <ClInclude Include="StreamDecodeStruct.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="decode\BaseDecoder.cpp" />
+    <ClCompile Include="decode\AsyncDecoder.cpp" />
+    <ClCompile Include="decode\CudaOperation.cpp" />
+    <ClCompile Include="decode\DecodedFrameQueue.cpp" />
+    <ClCompile Include="decode\DecodeManager.cpp" />
+    <ClCompile Include="decode\DirectoryDecoder.cpp" />
+    <ClCompile Include="decode\Dxva2Decoder.cpp" />
+    <ClCompile Include="decode\dxva2\ffmpeg_dxva2.cpp" />
+    <ClCompile Include="decode\GpuDecoder.cpp" />
+    <ClCompile Include="decode\ImageProcess.cpp" />
+    <ClCompile Include="decode\OpencvDecoder.cpp" />
+    <ClCompile Include="decode\StreamParsor.cpp" />
+    <ClCompile Include="detect\FaceDetectorImpl.cpp" />
+    <ClCompile Include="detect\FaceExtractorImpl.cpp" />
+    <ClCompile Include="detect\FaceSdkApi.cpp" />
+    <ClCompile Include="detect\GpuCtxIndex.cpp" />
+    <ClCompile Include="detect\SnapMachine.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="FaceDetector.cpp" />
+    <ClCompile Include="FileSystem.cpp" />
+    <ClCompile Include="SnapCamera.cpp" />
+    <ClCompile Include="StreamDecoder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FaceDetector.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

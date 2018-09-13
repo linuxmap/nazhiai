@@ -1,0 +1,18 @@
+{
+  "fs": {
+    "host": "192.168.2.30",
+    "root": "E:/mux/",
+    "web": "http://192.168.2.51:8081/view/",
+    "web_service": true,
+    "max_files": 500,
+    "min_duration": 10,
+    "format": ".mp4"
+  },
+  "db": {
+    "url": "mysql://host=127.0.0.1 user=root pass=123 port=3306 db=appserver2 charset=utf8",
+    "username": "root",
+    "password": "123"
+  },
+  "rtsp": [
+  ]
+}

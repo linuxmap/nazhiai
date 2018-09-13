@@ -1,0 +1,10 @@
+Ice Home: D:\Workbench\MuxService\packages\zeroc.ice.v120.3.7.1\build\native\..\..
+Ice Tools Path: D:\Workbench\MuxService\packages\zeroc.ice.v120.3.7.1\build\native\..\..\tools
+Output Dir: D:\Workbench\MuxService\Client\generated
+Header Output Dir:
+Include Directories: D:\Workbench\MuxService\packages\zeroc.ice.v120.3.7.1\build\native\..\..\slice
+%(IceBuilderIncludeDirectories)
+Additional Options:
+Base Directory For Generated Include:
+Header Ext: h
+Source Ext: cpp

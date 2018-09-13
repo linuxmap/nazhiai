@@ -1,0 +1,4 @@
+{
+    "operation": "start",
+    "source": "rtsp://admin:admin123@192.168.2.64/h264"
+}

@@ -1,0 +1,76 @@
+{
+  "model_path": "model/",
+  
+  "extracts":[
+    {
+      "name": "extract01",
+      "model_name": "dual",
+      "device_index":  0,
+      "thread_count":  1,
+      "buffer_size":  40,  
+      "batch_timeout":  40,  
+      "batch_size":  20,
+      "result_buffer_size": 100
+    }
+  ],
+  "captures": [
+    {
+      "extract_name": "extract01",
+      "model_name": "dual",
+      "detect":  {
+        "device_index":  0,
+        "thread_count":  1,
+        "face_model": "default",
+        "face_threshold":  8,
+        "threshold":  0.90,
+        "max_short_edge":  720,
+        "buffer_size":  30,
+        "batch_timeout":  500,  
+        "batch_size":  -1
+      },
+      "track":  {
+        "device_index":  0,
+        "thread_count":  1,
+        "threshold":  0.50,
+        "buffer_size":  30,
+        "batch_timeout":  500, 
+        "batch_size":  -1
+      },
+      "evaluate":  {
+        "device_index":  0,
+        "thread_count":  0,
+        "buffer_size":  30,
+        "batch_timeout":  500, 
+        "batch_size":  -1
+      },
+      "keypoint":  {
+        "device_index":  0,
+        "thread_count":  1,
+        "buffer_size":  30,
+        "batch_timeout":  500, 
+        "batch_size":  -1
+      },
+      "align":  {
+        "device_index":  0,
+        "thread_count":  1,
+        "buffer_size":  30,
+        "batch_timeout":  500, 
+        "batch_size":  -1
+      },
+      "analyze":  {
+        "device_index":  0,
+        "thread_count":  0,
+        "analyze_clarity": false,
+        "analyze_brightness": false,
+        "analyze_glasses": false,
+        "analyze_mask": false,    
+        "analyze_age_gender": false,
+        "analyze_age_ethnic": false,
+        "buffer_size":  40,
+        "batch_timeout":  40, 
+        "batch_size":  20
+      },
+      "result_buffer_size": 100
+    }
+  ]
+}
