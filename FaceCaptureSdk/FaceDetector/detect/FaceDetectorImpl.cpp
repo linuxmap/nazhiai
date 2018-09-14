@@ -181,11 +181,32 @@ void FaceDetector::Detector::Work()
         {
             PRINT_COSTS(DetectFacesByResolutionGroup);
 
-            if (_manager._trackParam.threadCount > 0 && trackSize > 0)
+            if (trackSize > 0)
             {
-                START_EVALUATE(PushOneTrack);
-                _manager.PushOneTrack(trackApiImageIPtrBuffer, trackSize);
-                PRINT_COSTS(PushOneTrack);
+                if (_manager._trackParam.threadCount > 0)
+                {
+                    START_EVALUATE(PushOneTrack);
+                    _manager.PushOneTrack(trackApiImageIPtrBuffer, trackSize);
+                    PRINT_COSTS(PushOneTrack);
+                }
+                else
+                {
+                    if (_manager._evaluateParam.threadCount > 0)
+                    {
+                        START_EVALUATE(PushOneEvaluates);
+                        _manager.PushOneEvaluates(trackApiImageIPtrBuffer, trackSize);
+                        PRINT_COSTS(PushOneEvaluates);
+                    }
+                    else
+                    {
+                        if (_manager._keypointParam.threadCount > 0)
+                        {
+                            START_EVALUATE(PushOneDetectKeypoints);
+                            _manager.PushOneDetectKeypoints(trackApiImageIPtrBuffer, trackSize);
+                            PRINT_COSTS(PushOneDetectKeypoints);
+                        }
+                    }
+                }
             }
 
             if (nextSize > 0)
@@ -1583,14 +1604,17 @@ bool FaceDetector::FetchBatch(ApiImagePtrBuffer& buffer, size_t& size, int thres
 
 void FaceDetector::PushOneDetect(ApiImagePtrBuffer& apiImageIPtrBuffer, int size)
 {
-    AUTOLOCK(_detectBufferLocker);
-    size_t poppedSize = PushBuffer(_detectBuffer, _detectImageNumber, _detectParam.bufferSize, apiImageIPtrBuffer, size);
-    if (poppedSize > 0)
+    if (_detectParam.threadCount > 0)
     {
-        LOG(WARNING) << poppedSize << " images in detect on Gpu:" << _detectParam.deviceIndex << " were discarded, because of buffer overflow: " << _detectParam.bufferSize;
-    }
+        AUTOLOCK(_detectBufferLocker);
+        size_t poppedSize = PushBuffer(_detectBuffer, _detectImageNumber, _detectParam.bufferSize, apiImageIPtrBuffer, size);
+        if (poppedSize > 0)
+        {
+            LOG(WARNING) << poppedSize << " images in detect on Gpu:" << _detectParam.deviceIndex << " were discarded, because of buffer overflow: " << _detectParam.bufferSize;
+        }
 
-    WAKEUP_ALL(_detectBufferCondition);
+        WAKEUP_ALL(_detectBufferCondition);
+    }
 }
 
 bool FaceDetector::FetchOneDetect(ApiImagePtrBatch& apiImageIPtrBatch)
@@ -1900,11 +1924,14 @@ void FaceDetector::PrepareDetectBuffer()
                 if (baseDecoder && baseDecoder->GetFrame(decodedFrame))
                 {
                     const FaceParam& faceParam = baseDecoder->GetFaceParam();
+                    
                     // convert to API image
                     ApiImagePtr apiImagePtr = FromDecodedFrame(decodedFrame, faceParam);
                     if (apiImagePtr)
                     {
-                        if (apiImagePtr->needetect)
+                        //apiImagePtr->Show();
+
+                        if (apiImagePtr->needetect || _trackParam.threadCount <= 0)
                         {
                             detectBuffer.push_back(apiImagePtr);
                             detectBufferSize++;

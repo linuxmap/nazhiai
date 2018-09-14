@@ -1093,7 +1093,7 @@ void testStreams(int argc, char** argv)
 
 int main(int argc, char** argv)
 {
-#if 1
+#if 0
     testUnit(argc, argv);
 #else
     testStreams(argc, argv);

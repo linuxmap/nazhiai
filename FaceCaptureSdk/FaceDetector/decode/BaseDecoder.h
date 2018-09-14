@@ -141,7 +141,7 @@ protected:
     FaceParam _faceParam;
     int _detectFramePos;
 
-    DecodedFrameQueuePtr _decodedFrameQueuePtr;
+    DecodedFrameQueue _decodedFrameQueue;
 
     CallbackPool::StoppedCallback _stoppedCallback;
 

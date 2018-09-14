@@ -370,6 +370,8 @@ void ApiGpuMat::Show()
         cv::rectangle(mat, cv::Rect(face.x, face.y, face.width, face.height), cv::Scalar(0, 255, 0));
     }
 
+    cv::putText(mat, std::to_string(*image.refcount), cv::Point(image.cols >> 1, 100), cv::FONT_HERSHEY_PLAIN, 2.0f, cv::Scalar(0, 255, 0));
+
     cv::imshow(sourceId, mat);
     cv::waitKey(1);
 }

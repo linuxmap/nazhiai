@@ -241,13 +241,13 @@ bool GpuMatDecoder::ReadFrame(DecodedFrame& frame)
 
         bool copyCudaSuccess = true;
         frame.id = decoded_frame.frame_index;
-        if (!XMatPool<cv::cuda::GpuMat>::Alloc(decoded_frame.mat, frame.gpumat, _sdkDecoderParam.device_index))
+        if (XMatPool<cv::cuda::GpuMat>::Alloc(decoded_frame.mat, frame.gpumat, _sdkDecoderParam.device_index))
         {
-            frame.gpumat = decoded_frame.mat.clone();
+            copyCudaSuccess = CudaOperation::CopyTo(frame.gpumat, decoded_frame.mat);
         }
         else
         {
-            copyCudaSuccess = CudaOperation::CopyTo(frame.gpumat, decoded_frame.mat);
+            frame.gpumat = decoded_frame.mat.clone();
         }
 
         ret = decoder::unref_frame<cv::cuda::GpuMat>(_decoder, decoded_frame);
@@ -261,7 +261,7 @@ bool GpuMatDecoder::ReadFrame(DecodedFrame& frame)
     }
     else
     {
-        std::this_thread::sleep_for(std::chrono::milliseconds(2));
+        std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
     return false;
 }

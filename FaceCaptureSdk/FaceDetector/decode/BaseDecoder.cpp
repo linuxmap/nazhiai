@@ -80,7 +80,7 @@ BaseDecoder::BaseDecoder(const std::string& url, const DecoderParam& decoderPara
     , _userFrameInterval(0), _origFrameInterval(0.0f)
     , _currentSkipPosition(0), _nextFrameId(0), _failureStart(0), _restartTimes(0)
     , _buffered(false), _faceParam(), _detectFramePos(1)
-    , _decodedFrameQueuePtr(new DecodedFrameQueue(_decoderParam.device_index, _decoderParam.buffer_size))
+    , _decodedFrameQueue(_decoderParam.device_index, _decoderParam.buffer_size)
     , _stoppedCallback(nullptr)
     , fpstat(5000)
 {
@@ -119,7 +119,7 @@ void BaseDecoder::Destroy()
 
 bool BaseDecoder::GetFrame(DecodedFrame& decodedFrame, bool sync)
 {
-    bool got = _decodedFrameQueuePtr->Pop(decodedFrame, sync);
+    bool got = _decodedFrameQueue.Pop(decodedFrame, sync);
     if (got && _faceParam.detect_interval > 1)
     {
         if (_detectFramePos > 1)
@@ -161,7 +161,7 @@ bool BaseDecoder::DecodeFrame()
             decodedFrame.buffered = _buffered;
             decodedFrame.sourceId = _id;
             decodedFrame.timestamp = TimeStamp<MILLISECONDS>::Now();
-            _decodedFrameQueuePtr->Push(decodedFrame);
+            _decodedFrameQueue.Push(decodedFrame);
         }
 
         fpstat.Stat(1, _id);

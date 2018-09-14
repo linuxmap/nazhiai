@@ -880,6 +880,10 @@ FaceDetector* FaceCaptureContext::ChooseFaceDetector(int deviceIndex)
         {
             largestIndex = from.analyzeParam.deviceIndex;
         }
+        else
+        {
+            largestIndex = from.detectParam.deviceIndex;
+        }
 
         if (deviceIndex == largestIndex)
         {

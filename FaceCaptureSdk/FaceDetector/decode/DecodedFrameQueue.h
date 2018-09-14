@@ -25,6 +25,9 @@ private:
     int _gpuIndex;
     int _bufferSize;
 
+    int _warningSize;
+    clock_t _lastDiscardClock;
+
     std::mutex _decodedFrameQueuesLocker;
     std::condition_variable _decodedFrameQueuesCondition;
     std::queue<DecodedFrame> _decodedFrameQueues;

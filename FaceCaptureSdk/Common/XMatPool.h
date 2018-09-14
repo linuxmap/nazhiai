@@ -33,7 +33,7 @@ public:
                 _pool_element_count--;
 #endif
 
-                return true;
+                return !dst.empty();
             }
         }
         return false;

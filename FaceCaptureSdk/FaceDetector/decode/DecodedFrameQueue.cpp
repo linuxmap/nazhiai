@@ -9,7 +9,7 @@
 #include "glog/logging.h"
 
 DecodedFrameQueue::DecodedFrameQueue(int gpuIndex, int bufferSize)
-    : _gpuIndex(gpuIndex), _bufferSize(bufferSize)
+    : _gpuIndex(gpuIndex), _bufferSize(bufferSize), _warningSize(0), _lastDiscardClock(clock())
     , _decodedFrameQueuesLocker(), _decodedFrameQueuesCondition(), _decodedFrameQueues()
 {
 
@@ -32,11 +32,24 @@ void DecodedFrameQueue::Push(DecodedFrame& decodedFrame)
     if (_decodedFrameQueues.size() > _bufferSize)
     {
         DecodedFrame& alias = _decodedFrameQueues.front();
-        LOG(WARNING) << "1 frame of (" << alias.sourceId << ") was discarded, because of buffer overflow: " << _bufferSize;
-
         Reserve(alias);
-
         _decodedFrameQueues.pop();
+
+        if (++_warningSize >= 10)
+        {
+            LOG(WARNING) << _warningSize << " frames of (" << decodedFrame.sourceId << ") were discarded, because of buffer overflow: " << _bufferSize;
+            _warningSize = 0;
+        }
+        else if (_warningSize == 1)
+        {
+            _lastDiscardClock = clock();
+        }
+    }
+
+    if (_warningSize > 0 && _lastDiscardClock + 5000 < clock())
+    {
+        LOG(WARNING) << _warningSize << " frames of (" << decodedFrame.sourceId << ") were discarded(5 seconds ahead), because of buffer overflow: " << _bufferSize;
+        _warningSize = 0;
     }
 
     WAKEUP_ONE(_decodedFrameQueuesCondition);
